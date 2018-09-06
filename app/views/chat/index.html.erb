@@ -1,0 +1,14 @@
+<h2>Messages</h2>
+
+<p>
+<% Post.all.each do |mes| %>
+  <div class="message">
+  <%= mes.user.email%>:
+  <%= mes.message%>
+  </div>
+<% end %>
+</p>
+
+<div> <textarea name="" id="message" tabindex=""></textarea>
+  <button id="commit">commit</button>  
+</div>

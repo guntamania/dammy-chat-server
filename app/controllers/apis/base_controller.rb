@@ -1,4 +1,4 @@
-class Apis::V1::BaseController < ActionController::Base
+class Apis::BaseController < ActionController::Base
   include DeviseTokenAuth::Concerns::SetUserByToken
   protect_from_forgery except: :some_action
 end

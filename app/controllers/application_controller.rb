@@ -4,4 +4,7 @@ class ApplicationController < ActionController::Base
   def sign_in_required
     redirect_to new_user_session_url unless user_signed_in?
   end
+  def after_sign_in_path_for(resource)
+    chat_commit_url
+  end
 end
