@@ -93,4 +93,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { host: 'dammy-chat-server.herokuapp.com', port: 80 }
+
+  config.action_controller.allow_forgery_protection = false
 end
