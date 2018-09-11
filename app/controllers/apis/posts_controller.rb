@@ -4,7 +4,7 @@ class Apis::PostsController < Apis::BaseController
     posts = Post
             .all
             .limit(100)
-            .map{|p| {email: p.user.email, message: p.message}}
+            .map{|p| {user: p.user.name, message: p.message}}
     render json: posts
   end
   
@@ -14,7 +14,7 @@ class Apis::PostsController < Apis::BaseController
     posts = Post
             .all
             .limit(100)
-            .map{|p| {email: p.user.email, message: p.message}}
+            .map{|p| {user: p.user.name, message: p.message}}
     render json: posts
   end
 end

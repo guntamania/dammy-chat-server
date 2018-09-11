@@ -3,7 +3,7 @@
 <p>
 <% Post.all.each do |mes| %>
   <div class="message">
-  <%= mes.user.email%>:
+  <%= mes.user.name%>:
   <%= mes.message%>
   </div>
 <% end %>
