@@ -35,6 +35,8 @@ DeviseTokenAuth.setup do |config|
   # By default we will use callbacks for single omniauth.
   # It depends on fields like email, provider and uid.
   # config.default_callbacks = true
+  config.change_headers_on_each_request = false
+  config.token_lifespan = 1.month
 
   # Makes it possible to change the headers names
   # config.headers_names = {:'access-token' => 'access-token',
