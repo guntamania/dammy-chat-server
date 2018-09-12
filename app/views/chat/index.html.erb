@@ -1,13 +1,13 @@
 <h2>Messages</h2>
 
-<p>
+<div id="timeline" >
 <% Post.all.each do |mes| %>
   <div class="message">
   <%= mes.user.name%>:
   <%= mes.message%>
   </div>
 <% end %>
-</p>
+</div>
 
 <div> <textarea name="" id="message" tabindex=""></textarea>
   <button id="commit">commit</button>  
