@@ -6,8 +6,7 @@ $(window).on('load',function(){
   });
 });
 
-function addMessage(data) {
-  var message = data['message'];
+function addMessage(message) {
   var parent = document.getElementById('timeline');
   var div = document.createElement('div');
   div.innerText = message['user'] + ": " + message['message'];
