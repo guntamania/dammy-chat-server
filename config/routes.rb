@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/example', to: 'welcome#example'
   get 'chat', to: 'chat#index'
   post 'chat/commit', to: 'chat#commit'
+  mount ActionCable.server => '/cable'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :apis do
