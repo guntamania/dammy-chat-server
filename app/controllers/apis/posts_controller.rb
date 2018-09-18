@@ -3,8 +3,8 @@ class Apis::PostsController < Apis::BaseController
   def index
     posts = Post
             .all
-            .limit(100)
-            .map{|p| {user: p.user.name, message: p.message}}
+            .last(20)
+            .map{|p| p.render_message }
     render json: posts
   end
   
@@ -13,8 +13,8 @@ class Apis::PostsController < Apis::BaseController
     current_user.posts.create(message: json_req[:message])
     posts = Post
             .all
-            .limit(100)
-            .map{|p| {user: p.user.name, message: p.message}}
+            .last(20)
+            .map{|p| p.render_message }
     render json: posts
   end
 end

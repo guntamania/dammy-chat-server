@@ -3,6 +3,6 @@ class Post < ApplicationRecord
   after_create_commit {ActionCable.server.broadcast 'post_channel', render_message}
 
   def render_message
-    {message: message, user: user.name}
+    {message: message, user: user.name, email: user.email, ts: created_at}
   end
 end

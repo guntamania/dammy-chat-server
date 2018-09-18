@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
-  root 'welcome#index'
+  root 'chat#index'
   get 'welcome/example', to: 'welcome#example'
   get 'chat', to: 'chat#index'
   post 'chat/commit', to: 'chat#commit'
